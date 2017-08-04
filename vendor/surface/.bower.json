@@ -1,0 +1,35 @@
+{
+  "name": "surface",
+  "description": "Material Design, CSS only framework.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Ben Mildren"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "material",
+    "design",
+    "material",
+    "design",
+    "css",
+    "framework"
+  ],
+  "homepage": "https://github.com/mildrenben/surface",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "f866cc0f39",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f866cc0f39efe949953a71c5e3c388c0a80bae70"
+  },
+  "_source": "https://github.com/mildrenben/surface.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/mildrenben/surface.git",
+  "_direct": true
+}

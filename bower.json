@@ -1,0 +1,17 @@
+{
+  "name": "tpl_frontend",
+  "description": "frontend web development framework",
+  "main": "",
+  "private": true,
+  "dependencies": {
+    "animate.css": "animate-css#^3.5.2",
+    "surface": "https://github.com/mildrenben/surface.git"
+  },
+  "overrides": {
+    "surface": {
+      "main": [
+        "dist/surface_styles.css"
+      ]
+    }
+  }
+}

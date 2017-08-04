@@ -1,0 +1,46 @@
+extends ./_layout.jade
+block content
+  header.bg--gun-metal
+    .logo
+    .topmenu
+      .mitem 
+        a(href="#") Docs
+      .mitem 
+        a(href="#") Lists
+      .mitem.shop
+        a(href="#")
+          include ./shop.svg
+
+  nav
+    ul
+      li home
+      li about
+
+  .display
+    select
+      option one
+      option two
+      option three
+
+  .card
+    | I am a card
+
+  main
+
+    table.card
+      tr.table-header
+        td Number
+        td Name
+        td Age
+        td Job
+      tr
+        td 521
+        td Ben
+        td 23
+        td Front End Dev
+      tr
+        td 951
+        td Zoe
+        td 21
+        td Care Worker
+
