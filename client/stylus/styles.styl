@@ -15,6 +15,7 @@ header
   justify-content space-between
   padding 0
   height 45px
+  margin-bottom 15px
   box-shadow 0px 8px 9px -6px rgba(0,0,0,0.2)
 
   .logo
@@ -25,60 +26,90 @@ header
 
   .topmenu 
     display flex
+    width 150px
+    justify-content space-between
     align-items center
-    margin-right 0px
-
-  .mitem
-    min-width 45px
+    margin-right 20px
     +desktop()
-      min-width 65px
+      width 220px
 
   .mitem a
     color #f2f2f2
     text-decoration none
 
-  .shop
+  .shop a svg
     fill #f2f2f2
     margin-top 5px
 
-nav ul
+[class^=btn]
+  font-family $helvetica
+  font-size 12px
+  letter-spacing .8px
+
+input {
+	&[type="email"], &[type="text"], 
+	&[type="password"] {
+    border-bottom 0px
+    line-height 11px
+    color #607D8B
+	  &:focus, &:valid {
+	    &::-webkit-input-placeholder {
+	      font-size: 14px;
+	      line-height 11px
+	      transform: translateY(1px);
+	    }
+	  }
+	}
+}
+
+
+nav
   display flex
+  justify-content space-between
+  border-bottom 1px solid gray
+  padding 0px 20px 20px 20px
+  margin-bottom 30px
 
-.display
-  margin auto
-  margin-left 150px
-  margin-top 20px
+  ul
+    display flex
+    width 220px
+    justify-content space-between
 
-main
-  padding 10px 10px
-  +desktop()
-    padding 20px 40px
+  li 
+    flex 0 
 
-table
-  border-collapse collapse
+  a
+    color #607D8B
+    text-decoration none
 
-tr
-  border-bottom 1px solid #ebebeb
+.subnav
+  display flex
+  justify-content space-between
+  padding 5px 20px 20px 20px
+  margin-bottom 0px
 
+  button
+    margin-right 20px
+    margin-top 5px
 
-tr.table-header
-  background #f1f1f1
+// varaibles
+$hs-sele-color=#f2f2f2
 
-.display
-  width 200px
+.hs-select// {{{
+  width 120px
   height 30px
   position relative
   display block
   line-height 24px
-  background #c1f1f1
+  background $hs-sele-color
+  border-bottom 1px solid #607D8B
   overflow hidden
-  border-radius 6px
 
 select::-ms-expand
   display none
 
 select:focus::-ms-value 
-  background #c1f1f1
+  background $hs-sele-color
   color #444
 
 select:-moz-focusring
@@ -93,12 +124,12 @@ select
   outline 0
   box-shadow none
   border 0 !important
-  background #c1f1f1
+  background $hs-sele-color
   color #444
   font-size 14px
   letter-spacing 1px
 
-.display
+.hs-select
   &::after
     content '\25BC'
     position absolute
@@ -106,7 +137,26 @@ select
     top 0
     right 0
     bottom 0
-    padding 0 8px
-    line-height 28px
+    margin 5px
+    border-radius 4px
+    font-size 9px
+    padding 0px 8px
+    line-height 21px
     background #34495e
-    pointer-events none
+    pointer-events none// }}}
+
+main
+  padding 0px 10px
+  +desktop()
+    padding 20px 40px
+
+table// {{{
+  border-collapse collapse
+
+tr
+  border-bottom 1px solid #ebebeb
+
+
+tr.table-header
+  background #F6F8FA// }}}
+

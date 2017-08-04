@@ -109,6 +109,7 @@ header {
           justify-content: space-between;
   padding: 0;
   height: 45px;
+  margin-bottom: 15px;
   -webkit-box-shadow: 0px 8px 9px -6px rgba(0,0,0,0.2);
           box-shadow: 0px 8px 9px -6px rgba(0,0,0,0.2);
 }
@@ -124,69 +125,109 @@ header .topmenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 0px;
-}
-header .mitem {
-  min-width: 45px;
+  margin-right: 20px;
 }
 @media only screen and (min-width: 1050px) {
-  header .mitem {
-    min-width: 65px;
+  header .topmenu {
+    width: 220px;
   }
 }
 header .mitem a {
   color: #f2f2f2;
   text-decoration: none;
 }
-header .shop {
+header .shop a svg {
   fill: #f2f2f2;
   margin-top: 5px;
+}
+[class^=btn] {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  border-bottom: 0px;
+  line-height: 11px;
+  color: #607d8b;
+}
+input[type="email"]:focus::-webkit-input-placeholder,
+input[type="text"]:focus::-webkit-input-placeholder,
+input[type="password"]:focus::-webkit-input-placeholder,
+input[type="email"]:valid::-webkit-input-placeholder,
+input[type="text"]:valid::-webkit-input-placeholder,
+input[type="password"]:valid::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 11px;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #aaa;
+  padding: 0px 20px 20px 20px;
+  margin-bottom: 30px;
 }
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 220px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.display {
-  margin: auto;
-  margin-left: 150px;
-  margin-top: 20px;
+nav li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
-main {
-  padding: 10px 10px;
+nav a {
+  color: #607d8b;
+  text-decoration: none;
 }
-@media only screen and (min-width: 1050px) {
-  main {
-    padding: 20px 40px;
-  }
+.subnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 20px 20px 20px;
+  margin-bottom: 0px;
 }
-table {
-  border-collapse: collapse;
+.subnav button {
+  margin-right: 20px;
+  margin-top: 5px;
 }
-tr {
-  border-bottom: 1px solid #ebebeb;
-}
-tr.table-header {
-  background: #f1f1f1;
-}
-.display {
-  width: 200px;
+.hs-select {
+  width: 120px;
   height: 30px;
   position: relative;
   display: block;
   line-height: 24px;
-  background: #c1f1f1;
+  background: #f2f2f2;
+  border-bottom: 1px solid #607d8b;
   overflow: hidden;
-  border-radius: 6px;
 }
 select::-ms-expand {
   display: none;
 }
 select:focus::-ms-value {
-  background: #c1f1f1;
+  background: #f2f2f2;
   color: #444;
 }
 select:-moz-focusring {
@@ -204,20 +245,40 @@ select {
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 0 !important;
-  background: #c1f1f1;
+  background: #f2f2f2;
   color: #444;
   font-size: 14px;
   letter-spacing: 1px;
 }
-.display::after {
+.hs-select::after {
   content: '\25BC';
   position: absolute;
   color: #fff;
   top: 0;
   right: 0;
   bottom: 0;
-  padding: 0 8px;
-  line-height: 28px;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 9px;
+  padding: 0px 8px;
+  line-height: 21px;
   background: #34495e;
   pointer-events: none;
+}
+main {
+  padding: 0px 10px;
+}
+@media only screen and (min-width: 1050px) {
+  main {
+    padding: 20px 40px;
+  }
+}
+table {
+  border-collapse: collapse;
+}
+tr {
+  border-bottom: 1px solid #ebebeb;
+}
+tr.table-header {
+  background: #f6f8fa;
 }

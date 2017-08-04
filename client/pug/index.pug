@@ -4,26 +4,35 @@ block content
     .logo
     .topmenu
       .mitem 
-        a(href="#") Docs
-      .mitem 
         a(href="#") Lists
+      .mitem 
+        a(href="#") Settings
       .mitem.shop
         a(href="#")
           include ./shop.svg
 
   nav
+    .hs-select
+      select
+        option Callback
+        option Show All
+        option Pending
     ul
-      li home
-      li about
+      li 
+        a(href="#") Dashboard
+      li
+        a(href="#") Issues
+      li
+        a(href="#") Releases
 
-  .display
-    select
-      option one
-      option two
-      option three
-
-  .card
-    | I am a card
+  .subnav
+    .sn-item.sn-btn
+      button.btn--raised.btn-blue
+        | Bookmarks
+      button.btn--raised.btn-blue
+        | Assigned
+    .sn-item
+      input(type="text" placeholder="Search")
 
   main
 
@@ -44,3 +53,9 @@ block content
         td 21
         td Care Worker
 
+  // footer
+  //   .name
+  //     | Sentry Beta
+  //   .links
+  //     span Contribute
+  //     span Feedback
