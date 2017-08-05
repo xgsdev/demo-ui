@@ -1,7 +1,8 @@
 extends ./_layout.jade
 block content
   header.bg--gun-metal
-    .logo
+    .logo.animated.tada
+      include ./logo.svg
     .topmenu
       .mitem 
         a(href="#") Lists
@@ -53,9 +54,9 @@ block content
         td 21
         td Care Worker
 
-  // footer
-  //   .name
-  //     | Sentry Beta
-  //   .links
-  //     span Contribute
-  //     span Feedback
+  .sp-footer.bg--silver
+    .fitem.fname
+      | Sentry Beta
+    .fitem.flinks
+      span Contribute
+      span Feedback
